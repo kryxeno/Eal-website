@@ -1,0 +1,1162 @@
+:root {
+  /* https://stackoverflow.com/questions/57661659/w3c-css-validation-parse-error-on-variables 
+  There are parse errors in w3c validator, but the validator is outdated.
+  https://www.youtube.com/watch?v=IHaT_rjC2gM&t=1s
+  You can change the entire color scheme with these values*/
+  --hue: 0;
+  --sat: 97%;
+  --light: 57%;
+  --prim-clr: var(--hue), var(--sat), var(--light) ; 
+  --sec-clr: 343, 89%, 54%;
+  --tert-clr: 20, 100%, 54%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: roboto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #b1b1b1;
+  font-size: 0.9rem;  
+  background-image: linear-gradient(23deg, hsl(var(--prim-clr), .4) 50%, hsl(var(--tert-clr), .4) 90%), url(./Images/twitch_banner.jpg);
+  background-size: cover; 
+  background-attachment: fixed;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  line-height: 1.2em;
+  padding: 0.5em 0 0.2em;
+  font-weight: 500;
+  margin-bottom: 0.15em;
+}
+
+h2,h3 {
+  color: white;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.4em;
+  font-weight: 300;
+  padding: 0.3em 0;
+}
+
+a {
+  color: white;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+/* Scroll margin for news buttons ---------------------------------------------------------------------------------------- */
+#news-1 {
+ scroll-margin-top: 10em;
+}
+
+#news-2 {
+  scroll-margin-top: 10em;
+}
+
+#news-3 {
+  scroll-margin-top: 10em;
+}
+
+/* Navigation ------------------------------------------------------------------------------------------------------------ */
+nav {
+  background: linear-gradient(23deg, rgba(0, 0, 0, 0.67) 0%, rgba(19,19,19,0.8) 51%, hsl(var(--hue), 100%, 17%) 100%);
+  height: 5.6em;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+}
+
+nav > label {
+  float: right;
+  line-height: 2.6em;
+  margin-right: 2.5em;
+  margin-top: 1.4em;
+  cursor: pointer;
+  display: none;
+} 
+
+nav > label > img {
+  width: 2.7em;
+  height: auto;
+  margin-bottom: 0.3em;
+}
+
+/* Hiding the input checkmark box */
+#burger {
+  display: none;
+}
+
+nav > a:first-of-type {
+  color: white;
+  font-size: 2.3rem;
+  line-height: 2.2em;
+  padding-left: 2.7em;
+  font-weight: 600;
+  position: absolute;
+  font-family: erbaum;
+}
+
+nav a img {
+  position: absolute;
+  margin-left: 3em;
+  top: 1em;
+  width: 3.5em;
+  height: auto;
+  font-size: 0.9rem;
+}
+
+nav ul{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5vw;
+}
+
+nav ul li {
+  line-height: 5.6em;
+  margin: 0 0.6em;
+}
+
+nav ul li a {
+  padding: 0.6em 0.8em;
+  transition: .3s;
+}
+
+a.active,nav > ul > li > a:hover {
+  background: hsl(var(--prim-clr));
+}
+
+nav ul li:last-child a {
+  border: solid 1px white;
+  padding: 0.6em 2em;
+  margin-left: 3em;
+}
+
+nav ul li:hover:last-child a {
+  background: white;
+  color: hsl(var(--prim-clr));
+}
+
+/* Main ------------------------------------------------------------------------------------------------------------------ */
+/* Banner ---------------------------------------------------------------------------------------------------------------- */
+.banner {
+  padding-top: 12em;  
+  text-align: center;
+  color: white;
+}
+
+.banner p:first-child {
+  font-size: 2rem;
+  margin: 0 1.2em;
+  font-family: rift;
+  line-height: 0;
+}
+
+.banner p:last-of-type {
+  font-size: 1.2rem;
+  margin: 0 20%;
+}
+
+.banner h1 {
+  font-size: clamp(5rem, 9vw, 11rem);
+  text-transform: uppercase;
+  font-family: rift;
+  line-height: 1em;
+}
+
+.banner h1 span {
+  color: hsl(var(--prim-clr));
+}
+
+.banner section {
+  display: flex;
+  justify-content: center;
+  margin: 2em 10% 10em;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.banner section a {
+  border: solid 2px white;
+  padding: 0.8em 2em;
+  font-size: 1.1rem;
+  opacity: 0.6;
+  transition: .3s;
+  margin: 0;
+}
+
+.banner section a:hover {
+  background: none;
+  opacity: 1;
+}
+
+.banner section a:first-of-type {
+  background-color: hsl(var(--prim-clr));
+  border: solid 2px hsl(var(--prim-clr));
+  opacity: 1;
+}
+
+.banner section a:hover:first-of-type {
+  background-color: white;
+  color: hsl(var(--prim-clr));
+  border: solid 2px white;
+  opacity: 1;
+}
+
+/* Sponsor Segment ------------------------------------------------------------------------------------------------------- */
+.sponsor ul {
+  display: flex;
+  background-color: #0e0e0e;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sponsor li {  
+  margin: 0 1em;
+}
+
+.sponsor li img {  
+  width: 16em;
+  filter: invert(1);
+  opacity: 0.5;
+}
+
+/* Article at the top of the page ---------------------------------------------------------------------------------------- */
+.top-article {
+  background-color: #1f1f1f;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 8em 10% 3em;
+}
+
+.top-article div {
+  max-width: 63em;
+}
+
+.top-article div h3 {
+  margin-bottom: 1em;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.top-article div section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.top-article div section p {
+  flex: 1 1 20em;
+}
+
+.top-article div section p:last-of-type {
+  margin-bottom: 2em;
+}
+
+/* Season 3 Standings Table- -------------------------------------------------------------------------------------------- */
+.standings {
+  background-color: #0e0e0e;
+  padding: 8em 0 3em;  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.standings table {
+  margin-top: 1em;
+  border-collapse: collapse;
+}
+
+.standings tr {
+  transition: .3s;
+}
+
+.standings tr:nth-child(even) {
+  background-color: #111111;
+}
+
+.standings img {
+  width: 2em;
+  margin-left: 0;
+}
+
+.standings th, td {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.4em 3vw;
+  font-weight: 400;
+  color: #b8b8b8;
+}
+
+.standings th {
+  background-color: hsl(var(--hue), var(--sat), 20%);
+  text-transform: uppercase;
+  letter-spacing: 2px;  
+}
+
+.standings td:nth-child(2) {
+  padding-right: 1em;
+}
+
+.standings td:nth-child(3), th:nth-child(3) {
+  text-align: left;
+  padding-left: 0;
+  font-size: 1.3rem;
+}
+
+.standings tr:hover {
+  background-color: hsl(0, 0%, 9%);
+}
+
+/* Sign up page where people join----------------------------------------------------------------------------------------- */
+.join {
+  background: #1b1b1b;
+  display: flex;
+  justify-content: center;
+  padding: 8em 0 5em;
+}
+
+.join > div {
+  max-width: 70em;  
+  margin: 0 10%;  
+  flex-direction: column;
+  align-items: center;
+}
+
+.join div > div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5em;  
+  margin-top: 3em;
+}
+
+.join section {
+  flex: 1 1 35%;
+  min-width: 25em;
+}
+
+.join > p {
+
+  font-size: 1.2rem;
+}
+
+.join em {
+  color: white;
+}
+
+.join ol > li > p:first-letter {
+  color: hsl(var(--prim-clr));
+}
+
+.join h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.join h3 strong {
+  color: hsl(var(--prim-clr));
+  font-weight: 500;
+}
+
+.join ul li {
+  margin: 0.5em 2em;
+  font-style: italic;
+}
+
+.join a {
+  transition: .3s;
+}
+
+.join a:hover {
+  color: hsl(var(--prim-clr));
+}
+
+/* Schedule ------------------------------------------------------------------------------------------------------------- */
+.schedule {
+  background: #111111;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.schedule img {
+  min-width: 50%;
+  max-width: 100%;
+  width: 50em;
+}
+
+/* Contact form ---------------------------------------------------------------------------------------------------------- */
+.contact-form {
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 8em 10% 6em;
+}
+
+.contact-form > div {
+  max-width: 63em;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form h3 {
+  margin-bottom: 1em;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.contact-form h3:last-of-type {
+  margin-top: 2em;
+}
+
+.contact-form h3:first-of-type {
+  margin-top: 0;
+}
+
+.contact-form form {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1.2em;
+  margin-top: 1em;
+}
+
+input[type="text"] {
+  font-size: 1rem;
+  color: white;  
+  font-weight: 500;
+}
+
+.contact-form form input {
+  flex: 1 1 45%;
+  min-width: 20em;
+  padding: 1em 1em;
+  background-color: #757575;
+  border: none;
+}
+
+.contact-form form input:focus, .contact-form form textarea:focus {
+  outline: 2px solid hsl(var(--prim-clr));
+}
+
+.contact-form form input::placeholder, .contact-form form textarea::placeholder {
+  color: rgb(185, 185, 185);
+  font-family: roboto;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.contact-form form textarea {
+  flex: 1 1 100%;
+  padding: 1em 1em 5em;
+  background-color: #757575;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  font-family: roboto;
+}
+
+.contact-form button {
+  padding: 1.2em 2em;
+  background-color: hsl(var(--prim-clr));
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.contact-form button:hover {
+  background-color: white;
+  color: hsl(var(--prim-clr));
+  cursor: pointer;
+}
+
+.contact-form a {
+  font-size: 1rem;
+  color: hsl(var(--prim-clr));
+  transition: .3s;
+}
+
+/* list section with li's------------------------------------------------------------------------------------------------- */
+.column-list {
+  display: flex;
+  justify-content: center;
+  background-color: #1b1b1b;
+}
+
+.column-list article {
+  margin: 3em 10%;
+  max-width: 63em;
+}
+
+.column-list ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  
+  gap: 4em;
+  margin-top: 3em;
+}
+
+.column-list ul li {
+  flex: 1 1 20em;
+}
+
+.column-list h3 {
+  font-weight: 400;
+}
+
+.column-list a {
+  transition: .3s;
+}
+
+.column-list a:hover {
+  color: hsl(var(--prim-clr));
+}
+
+/* News card links ------------------------------------------------------------------------------------------------------- */
+.cards {
+  display: flex;
+  justify-content: center;
+  background-color: #1f1f1f;
+  flex-direction: column;
+}
+
+.cards h2 {
+  text-align: center;
+  line-height: 2em;
+}
+
+.cards ul {
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+  flex-wrap: wrap;  
+  margin-bottom: 5em;
+}
+
+.cards ul li {
+  position: relative;
+  padding: 3em;
+  width: 20em;
+  background-color: #141111;
+  border-radius: 0.8em;
+}
+
+.cards ul li h2 {
+  position: absolute;
+  top: -0.85em;
+  right: 0.1em;
+  font-size: 7rem;
+  letter-spacing: 0;
+  color: hsl(var(--hue), 60%, 25%);
+  transition: .3s;
+}
+
+.cards ul li:hover h2 {
+  top: -1.1em;
+}
+
+.cards ul li h3 {
+  position: relative;
+  text-transform: capitalize;
+}
+
+.cards ul li p {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.cards ul li a {
+  position: relative;
+  border: solid 0.1em white;
+  padding: 0.5em 1em;
+  text-transform: none;
+  margin: 1em 0;
+  transition: .3s;
+  opacity: 0;
+  left: 5em;
+}
+
+.cards ul li:hover a {
+  opacity: 1;
+  left: 0;
+}
+
+.cards ul li a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* news date class ------------------------------------------------------------------------------------------------------- */
+.date {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #887e7e;
+}
+
+/* Image break between sections ------------------------------------------------------------------------------------------ */
+.img-break {
+  background-image: linear-gradient(23deg, hsl(var(--prim-clr), .4) 50%, hsl(var(--tert-clr), .4) 90%), url(./Images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 10em;
+}
+
+/* Twitch embed -----------------------------------------------------------------------------------------------------------*/
+.player {  
+  background: rgb(8, 8, 8);
+  padding: 4em 0;
+}
+
+.player div {
+  display: flex;
+  justify-content: center;
+}
+
+/* Aspect ratio is a fix or simplification of the padding trick (should work on firefox)*/
+.player div iframe {
+  height: 100%;
+  width: 60%;
+  border: none;
+  aspect-ratio: 16/9;
+}
+
+/* Signup prompt/button --------------------------------------------------------------------------------------------------------- */
+.signup {
+  display: flex;
+  justify-content: center;
+  padding: 5em 10%;
+  flex-wrap: wrap;
+  background: #161616;
+}
+
+.signup article {
+  width: 50em;
+}
+
+.signup article p {
+  margin: 0.6em 0 1.5em 0 ;
+}
+
+.signup article a {
+  color: hsl(var(--prim-clr));
+  transition: .3s;
+}
+
+.signup article a:hover {
+  background: none;
+  color: white;
+}
+
+.signup aside img {
+  height: 12em;
+}
+
+/* Vertical list segment ------------------------------------------------------------------------------------------------- */
+.vertical-list {
+  display: flex;
+  background: rgb(41, 41, 41);
+  padding: 3em 0;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.vertical-list aside {
+  margin: -4em 0 -7em;
+  padding: 0;
+}
+
+.vertical-list aside img {
+  max-height: 80em;
+}
+
+.vertical-list article {
+  width: 42em;
+  padding: 0 2.5em;
+  margin: 1.2em 0;
+}
+
+.vertical-list article ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.vertical-list article ul li {
+  display: flex;
+  justify-content: flex-start;
+  margin: 1em 0;
+}
+
+.vertical-list article ul li img {
+  height: 4em;
+  border: solid 1px rgb(221, 221, 221);
+  margin-right: 1em;
+}
+
+.vertical-list article ul li section h3 {
+  text-transform: uppercase;
+  line-height: 0.85em;
+  font-weight: 400;
+}
+
+.vertical-list article ul li section p {
+  font-size: 0.95rem;
+}
+
+/* Article (img left) ---------------------------------------------------------------------------------------------------- */
+.art-left {
+  display: flex;
+  background: rgb(29, 29, 29);
+  padding: 3em 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.art-left aside {
+  margin: 1.1em 0;
+  overflow: hidden;
+}
+
+.art-left aside img {
+  width: 46em;
+  border-radius: 0.8em;  
+  max-width: 100%;
+  max-height: 20em;
+  object-fit: cover;
+}
+
+.art-left article {
+  width: 42em;
+  padding: 0 2.5em;
+  margin: 1.2em 0;
+}
+
+/* Article (img right) --------------------------------------------------------------------------------------------------- */
+.art-right {
+  display: flex;
+  background: rgb(20, 20, 20);
+  padding: 3em 0;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+}
+
+.art-right aside {
+  margin: 1.1em 0;
+  overflow: hidden;
+}
+
+.art-right aside img {
+  width: 46em;
+  border-radius: 0.8em;  
+  max-width: 100%;
+  max-height: 20em;
+  object-fit: cover;
+}
+
+.art-right article {
+  width: 42em;
+  padding: 0 2.5em;
+  margin: 1.2em 0;
+}
+
+/* Article (Full img left) ----------------------------------------------------------------------------------------------- */
+.art-full-left {
+  display: flex;
+  background: rgb(8, 8, 8);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.art-full-left aside {
+  flex: 50%;
+  overflow: hidden;
+}
+
+.art-full-left aside img { 
+  height: 52em;
+  width: 100%;
+  object-fit: cover;
+  margin: -8em 0 -15em;
+}
+
+.art-full-left article {
+  flex: 50%;
+  padding: 3em 2.5em;
+  margin: 1.2em 0;
+}
+
+.art-full-left article p {
+  max-width: 35em;
+  margin-bottom: 1em;
+}
+
+.art-full-left article a {
+  text-decoration: underline;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 1.2rem;
+  transition: .3s;
+}
+
+.art-full-left article a:hover {
+  color: hsl(var(--prim-clr));
+  background: none;
+}
+
+/* Sources section-------------------------------------------------------------------------------------------------------- */
+.sources {
+  background-color: #161616;
+  display: flex;
+  justify-content: center;
+}
+
+.sources div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 8em 0 5em;
+  margin: 0 10%;
+}
+
+.sources ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5em;
+}
+
+.sources ul li a {
+  color: #665a5a;
+  padding: 1.5em 1.5em;
+  opacity: 0.5;
+  transition: .3s;
+}
+
+.sources ul li a:hover {
+  opacity: 1;
+}
+
+.sources ul img {
+  width: auto;
+  height: 2.5em;
+}
+
+
+/* Read more class ------------------------------------------------------------------------------------------------------- */
+.read-more {
+  color: #887e7e;
+  font-size: 0.9rem;
+  transition: .3s;
+}
+
+.read-more:hover {
+  color: hsl(var(--prim-clr));
+  background: none;
+}
+
+/* Footer ---------------------------------------------------------------------------------------------------------------- */
+footer {
+  background-color: #141414;
+  padding-bottom: 2em;
+}
+
+footer div {
+  max-width: 75em;
+  margin: 0 auto;
+}
+
+footer section {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 0;
+  margin: 0 5%;
+}
+
+footer section ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer section ul li {
+  margin: 0.5em 0;
+}
+
+footer section ul li a {
+  opacity: 0.4;
+  padding: 1em 1.5em;
+  transition: .3s;
+}
+
+footer section ul li a:hover {
+  opacity: 0.8;
+}
+
+footer section:first-of-type img {
+  width: 3em;
+  opacity: 0.4;
+  transition: .3s;
+}
+
+footer section:first-of-type img:hover {
+  opacity: 0.8;
+  color: hsl(var(--prim-clr));
+}
+
+footer section:first-of-type ul:last-of-type {
+  flex-wrap: nowrap;  
+}
+
+footer section:first-of-type ul:last-of-type li a {
+  color: #665a5a;
+  padding: 0.5em 0.5em;
+}
+
+footer section:first-of-type ul:last-of-type img {
+  width: auto;
+  height: 1em;
+  opacity: 1;
+}
+
+footer section:last-of-type {
+  border-top: 1px #272727 solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+}
+
+footer section:last-of-type { 
+  text-align: center;
+  color: #665a5a;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+footer section:last-of-type ul li {
+  border-right: 1px solid #272727;
+}
+
+footer section:last-of-type ul li:last-of-type {
+  border-right: none;
+}
+
+footer p {
+  font-size: 0.8rem;
+  padding: 0 2em;
+}
+
+footer section:last-of-type > a {
+  letter-spacing: 2px;
+  padding: 2em;
+}
+
+footer section:last-of-type > a span {
+  color: hsl(var(--prim-clr));
+  transition: .3s;
+  position: absolute;
+  margin-left: 0.5em;
+}
+
+footer section:last-of-type > a:hover span {
+  color: hsl(var(--prim-clr));
+  margin-top: -1em;
+}
+
+
+/*media query------------------------------------------------------------------------------------------------------------- */
+@media (max-width: 85em) {
+  .sponsor li img {  
+    width: 14em;
+  }
+}
+@media (max-width: 73em) {
+  nav > label {
+    display: block;
+  }
+
+  /*hamburger menu*/
+  nav ul {
+    display: block;
+    position: fixed;    
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #141111;
+    top: 5.6em;
+    text-align: center;
+    transition: .3s;
+  }
+
+  nav ul li {
+    margin: 4em 0;
+    line-height: 2em;
+  }
+
+  nav ul li a{
+    font-size: 1.2rem;
+  }
+
+  nav ul li:last-child a {
+    margin-left: 0;
+  }
+
+  nav > ul > li > a:hover,a.active {
+    background: #141111;
+    color: hsl(var(--prim-clr));
+  }
+
+  /* slide when pressing hamburger icon */
+  #burger:checked ~ ul{
+    left: 0;
+  }
+
+  .banner section a:hover {
+    color: white;
+  }
+
+  .banner section {
+    margin-bottom: 6em;
+  }
+
+  .banner h1 {
+    line-height: 1.5em;
+  }
+
+  .sponsor li img {  
+    width: 11em;
+  } 
+
+  .cards ul {
+    gap: 2em;
+  }
+
+  .cards ul li a {
+    position: absolute;
+    padding: 1em 8em;
+    margin: 0;    
+    left: 0;
+    top: 0;
+  }
+
+  .cards ul li:hover a {
+    opacity: 0;   
+  }
+
+  .cards ul li {
+    padding: 1.6em 3em;
+  }
+
+  .cards ul li p {
+    display: none;
+  }
+
+  .cards ul li h2 {
+    font-size: 3rem;    
+  }
+
+  .cards ul li h3 {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+  }
+
+  .vertical-list aside {
+    display: none;
+  }
+
+  .player {  
+    padding: 0;
+  }
+
+  .player div iframe {
+    width: 100%;
+  }
+
+  .art-full-left {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .art-full-left aside img {
+    margin: -12em 0 -20em;
+  }
+
+  /* higher scroll margin so the article starts at the top of the page */
+  #news-1 {
+    scroll-margin-top: 5em;
+  }
+
+  #news-2 {
+     scroll-margin-top: 5em;
+  }
+
+  #news-3 {
+     scroll-margin-top: 5em;
+  }
+
+  .sources ul img {
+    width: auto;
+    height: 1.5em;
+  }
+
+  footer div section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+
+  footer section:last-of-type ul li:nth-child(3) {
+    border: none;
+  }
+
+  footer section:first-of-type ul:last-of-type li a {
+    padding: 1.5em;
+  }
+
+  footer section:first-of-type ul:last-of-type img {
+    width: auto;
+    height: 1.5em;
+  }
+}
+@media (max-width: 33em) {
+  .banner section {
+    flex-direction: column;
+  }
+
+  .banner section a {
+    text-align: center;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+}
