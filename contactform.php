@@ -23,7 +23,7 @@ if($_POST) {
 
     if(isset($_POST['email'])) {
         $email = str_replace(array("\r", "\n", "%0a", "%0d"), '', $_POST['email']);
-        $email = filter_var(email, FILTER_VALIDATE_EMAIL);
+        $email = filter_var($email, FILTER_VALIDATE_EMAIL);
         $email_body .= "<div>
                            <label><b>Visitor Email:</b></label>&nbsp;<span>".$email."</span>
                         </div>";
@@ -44,7 +44,7 @@ if($_POST) {
                         </div>";
     }
      
-    $recipient = "tim.van.ingen@hva.nl";
+    $recipient = "contact.ealesports@gmail.com";
      
     $email_body .= "</div>";
 
@@ -61,10 +61,30 @@ if($_POST) {
 
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Contact EAL</title>
-	<link rel="icon" href="./Images/favicon.ico" type="image/icon">
+	<title>EAL Esports - Contact</title>
+	<meta name="title" content="EAL Esports - Contact">
+	<meta name="description" content="Get in touch with EAL if you have a business inquiry, or just want your questions answered.">
+	<meta name="keywords" content="EAL, EAL Esports, EALESPORTS, competition, competitive, league, league of legends, lol, diamond, gold, diamond 1, gold 1, amateur, europe, european, EAL Season 3, EAL Season 4, EAL News, twitch, stream, edc, ">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="language" content="English">
+    <meta property="og:url" content="https://ealesports.org/contactform.php">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="EAL Esports - Contact">
+	<meta property="og:description" content="Get in touch with EAL if you have a business inquiry, or just want your questions answered.">
+	<meta property="og:image" content="./Images/eal_og_image.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:domain" content="ealesports.org">
+	<meta property="twitter:url" content="https://ealesports.org/contactform.php">
+	<meta name="twitter:title" content="EAL Esports - Contact">
+	<meta name="twitter:description" content="Get in touch with EAL if you have a business inquiry, or just want your questions answered.">
+	<meta name="twitter:image" content="./Images/eal_og_image.jpg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./Images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./Images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./Images/favicon-16x16.png">
+	<link rel="manifest" href="./Images/site.webmanifest">
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://use.typekit.net/dwg0cmr.css">
 </head>
@@ -154,10 +174,8 @@ if($_POST) {
 			</section>
 			<section>
 				<ul>
-					<li><a href="#">Terms</a></li>	
-					<li><a href="#">Privacy</a></li>	
-					<li><a href="./sources.html">Sources</a></li>	
-					<li><p>&copy; 2021 EAL Esports | Not actually copyrighted</p></li>	
+					<li><p>2021 EAL Esports</p></li>
+					<li><p>Hosted by Sophie</p></li>	
 				</ul>				
 				<a href="#top">Back to Top <span>▲</span></a>
 			</section>

@@ -3,12 +3,12 @@
   There are parse errors in w3c validator, but the validator is outdated.
   https://www.youtube.com/watch?v=IHaT_rjC2gM&t=1s
   You can change the entire color scheme with these values*/
-  --hue: 0;
+  --hue: 200;
   --sat: 97%;
   --light: 57%;
   --prim-clr: var(--hue), var(--sat), var(--light) ; 
   --sec-clr: 343, 89%, 54%;
-  --tert-clr: 20, 100%, 54%;
+  --tert-clr: 220, 100%, 54%;
 }
 
 * {
@@ -29,7 +29,7 @@ body {
   font-style: normal;
   color: #b1b1b1;
   font-size: 0.9rem;  
-  background-image: linear-gradient(23deg, hsl(var(--prim-clr), .4) 50%, hsl(var(--tert-clr), .4) 90%), url(./Images/twitch_banner.jpg);
+  background-image: linear-gradient(23deg, hsl(var(--prim-clr), .4) 50%, hsl(var(--tert-clr), .4) 90%), url(./Images/dark_full.jpg);
   background-size: cover; 
   background-attachment: fixed;
 }
@@ -227,6 +227,7 @@ nav ul li:hover:last-child a {
   background-color: #0e0e0e;
   justify-content: center;
   flex-wrap: wrap;
+  min-height: 5em;
 }
 
 .sponsor li {  
@@ -621,7 +622,7 @@ input[type="text"] {
 
 /* Image break between sections ------------------------------------------------------------------------------------------ */
 .img-break {
-  background-image: linear-gradient(23deg, hsl(var(--prim-clr), .4) 50%, hsl(var(--tert-clr), .4) 90%), url(./Images/background.jpg);
+  background-image: linear-gradient(23deg, hsl(var(--prim-clr), .4) 50%, hsl(var(--tert-clr), .4) 90%), url(./Images/dark_full.jpg);
   background-size: cover;
   background-position: center;
   height: 10em;
